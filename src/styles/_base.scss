@@ -1,0 +1,46 @@
+:root {
+  // Colors
+  --color-white: #ffffff;
+  --color-blue-14: #1D1E28;
+  --color-blue-26: #343650;
+  --color-blue-59: #8385A9;
+  --color-pink-68: #FB5E84;
+
+  // Font Weights
+  --weight-bold: 700;
+
+  // Design elements
+  --transition: 300ms ease-in-out;
+}
+
+// Reset
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html, body, #root, .App {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-size: 1.4rem;
+  letter-spacing: 0;
+  color: var(--color-white);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--color-blue-14);
+  font-family: 'Red Hat Text', sans-serif;
+}
+
+h2,
+h3,
+p {
+  margin: 0;
+}
+
