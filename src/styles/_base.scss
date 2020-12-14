@@ -34,10 +34,13 @@ body {
   font-size: 1.4rem;
   letter-spacing: 0;
   color: var(--color-white);
+  background-repeat: no-repeat;
+  background-position: top center;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   background-color: var(--color-blue-14);
   font-family: 'Red Hat Text', sans-serif;
+  background-image: url(../assets/images/bg-stars.svg);
 }
 
 h2,
@@ -47,37 +50,49 @@ p {
 }
 
 .App {
-  padding: 0 2.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sr-only {
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(0px 0px 99.9% 99.9%);
 }
 
 
 .countdown-contrl {
   width: 30rem;
   display: flex;
-  margin: 0 auto;
+  margin: 6rem auto 0;
   justify-content: center;
 }
 
 button {
+  z-index: 1;
   border: none;
   cursor: pointer;
-  padding: 1.5rem 3rem;
-  border-radius: .8rem;
-  letter-spacing: 2px;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
+  position: relative;
+  padding: 1rem 2rem;
+  border-radius: .4rem;
+  letter-spacing: 1.6px;
   color: var(--color-white);
   text-transform: uppercase;
   font-weight: var(--weight-bold);
   background-color: var(--color-pink-68);
   font-family: 'Red Hat Text', sans-serif;
-  position: relative;
-  z-index: 1;
-  box-shadow: 0 .4rem 1.4rem 0 rgba(251,94,132,0.39);
   transition: var(--transition) background-color;
+  box-shadow: 0 .4rem 1.4rem 0 rgba(251,94,132,0.39);
 
   &:focus {
-    outline: 2px dotted var(--color-pink-68);
     outline-offset: 2px;
+    outline: 2px dotted var(--color-pink-68);
   }
 
   &:hover {

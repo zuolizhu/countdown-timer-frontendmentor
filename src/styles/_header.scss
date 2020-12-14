@@ -1,4 +1,15 @@
 .header {
+  padding: 0 2.4rem;
   text-align: center;
   padding-top: 14.2rem;
+  margin-bottom: 5.6rem;
+  transition: var(--transition) padding;
+  @media (min-width: 768px) {
+    padding-top: 6rem;
+  }
+
+  @media (min-width: 768px) and (min-height: 790px) {
+    padding-top: 12rem;
+    margin-bottom: 9.1rem;
+  }
 }

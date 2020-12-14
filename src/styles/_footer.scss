@@ -1,0 +1,25 @@
+.footer {
+  margin-top: auto;
+  height: 16.8rem;
+  background-repeat: no-repeat;
+  background-position: bottom right -20rem;
+  background-image: url(../assets/images/pattern-hills.svg);
+  @media (min-width: 768px) {
+    height: 19.6rem;
+    background-size: cover;
+    background-position: top center;
+  }
+  &__icons {
+    display: flex;
+    width: 13.6rem;
+    margin: 9.6rem auto 0;
+    justify-content: space-between;
+    @media (min-width: 768px) {
+      margin: 10.1rem auto 0;
+    }
+  }
+
+  &__icon {
+    display: inline-flex;
+  }
+}

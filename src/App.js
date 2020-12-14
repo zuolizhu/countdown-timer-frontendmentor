@@ -4,6 +4,7 @@ import Countdown from 'react-countdown';
 import Heading from './components/Heading';
 import FlipClock from './components/FlipClock';
 import { useRef, useEffect, useState } from 'react';
+import Footer from './components/Footer';
 
 function App() {
   const countFromDate = dayjs()
@@ -38,8 +39,9 @@ function App() {
       <Heading />
       <Countdown ref={CountdownRef} date={countFromDate} renderer={renderer} />
       <div className="countdown-contrl">
-        <button disabled={isStarted} onClick={handleStartClick}>{isStarted ? 'countdown started' : 'start countdown'}</button>
+        <button aria-label="button to control countdown" disabled={isStarted} onClick={handleStartClick}>{isStarted ? 'countdown started' : 'start countdown'}</button>
       </div>
+      <Footer />
     </div>
   );
 }
