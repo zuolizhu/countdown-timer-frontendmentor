@@ -1,14 +1,31 @@
 import StaticCard from './StaticCard'
 import AnimationCard from './AnimationCard'
-import getCalibratedNumber from '../getCalibratedNumber'
+import getPrevNumber from '../getPrevNumber'
+import { useState, useEffect } from 'react'
 
-export default function FlipClockUnit({ number, swap = true, unit }) {
+export default function FlipClockUnit({ number, unit }) {
   const currentNumber = number
-  const previousNumber = getCalibratedNumber(number + 1, unit)
-  const number1 = swap ? previousNumber : currentNumber
-  const number2 = swap ? currentNumber : previousNumber
-  const animation1 = swap ? 'fold' : 'unfold'
-  const animation2 = swap ? 'unfold' : 'fold'
+  const previousNumber = getPrevNumber(number + 1, unit)
+  const [swap, setSwap] = useState(false)
+
+  useEffect(() => {
+    setSwap(prev => !prev)
+  }, [number])
+
+  const number1 = swap 
+    ? previousNumber 
+    : currentNumber;
+  const number2 = !swap 
+    ? previousNumber 
+    : currentNumber;
+
+  // swap animations
+  const animation1 = swap 
+    ? 'fold' 
+    : 'unfold';
+  const animation2 = !swap 
+    ? 'fold' 
+    : 'unfold';
 
   return (
     <div className="flip-clock__unit-container">

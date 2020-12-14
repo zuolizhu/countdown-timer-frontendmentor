@@ -34,4 +34,9 @@
   text-transform: uppercase;
   color: var(--color-blue-59);
   font-weight: var(--weight-bold);
+  @media (min-width: 768px) {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    letter-spacing: 5.92px;
+  }
 }
