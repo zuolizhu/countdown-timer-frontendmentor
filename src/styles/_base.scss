@@ -49,3 +49,52 @@ p {
 .App {
   padding: 0 2.4rem;
 }
+
+
+.countdown-contrl {
+  width: 30rem;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  padding: 1.5rem 3rem;
+  border-radius: .8rem;
+  letter-spacing: 2px;
+  font-size: 1.6rem;
+  color: var(--color-white);
+  text-transform: uppercase;
+  font-weight: var(--weight-bold);
+  background-color: var(--color-pink-68);
+  font-family: 'Red Hat Text', sans-serif;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 .4rem 1.4rem 0 rgba(251,94,132,0.39);
+  transition: var(--transition) background-color;
+
+  &:focus {
+    outline: 2px dotted var(--color-pink-68);
+    outline-offset: 2px;
+  }
+
+  &:hover {
+    background-color: #f17493;
+  }
+}
+
+button:disabled {
+  cursor: none;
+  animation-delay: 2s;
+  animation-duration: .6s;
+  animation-name: fadeOut;
+  background-color: #f187a1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: translateY(0); z-index: 1; }
+  to { opacity: 0; transform: translateY(-2rem); z-index: -10; }
+}
