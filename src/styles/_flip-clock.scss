@@ -12,8 +12,8 @@
     height: 6.7rem;
     display: block;
     overflow: hidden;
-    perspective: 30rem;
     position: relative;
+	  perspective: 30rem;
     border-radius: .4rem;
     flex-direction: column;
     perspective-origin: 50% 50%;
@@ -112,7 +112,7 @@
         transform-origin: 50% 100%;
         transform-style: preserve-3d;
         border-top-left-radius: .4rem;
-	      border-top-right-radius: .4rem;
+        border-top-right-radius: .4rem;
         @include animate(fold, var(--easeInOut), 0.6s);
         .t-clock {
           transform: translateY(50%);
@@ -126,6 +126,8 @@
     position: relative;
     display: inline-flex;
     flex-direction: column;
+    perspective: 30rem;
+    perspective-origin: 50% 50%;
   }
 
   &__unit-shadow {

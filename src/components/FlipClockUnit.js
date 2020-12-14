@@ -4,7 +4,7 @@ import getCalibratedNumber from '../getCalibratedNumber'
 
 export default function FlipClockUnit({ number, swap = true, unit }) {
   const currentNumber = number
-  const previousNumber = getCalibratedNumber(number - 1, unit)
+  const previousNumber = getCalibratedNumber(number + 1, unit)
   const number1 = swap ? previousNumber : currentNumber
   const number2 = swap ? currentNumber : previousNumber
   const animation1 = swap ? 'fold' : 'unfold'
