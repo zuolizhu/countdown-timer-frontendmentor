@@ -1,0 +1,3 @@
+@mixin animate($name, $easing, $duration: 300ms, $delay: 0s, $iteration: 1, $direction: normal, $fill-mode: forwards) {
+  animation: $name $duration $easing $delay $iteration $direction $fill-mode;
+}

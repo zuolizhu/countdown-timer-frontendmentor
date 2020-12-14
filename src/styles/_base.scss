@@ -1,6 +1,7 @@
 :root {
   // Colors
   --color-white: #ffffff;
+  --color-blue-12: #191A23;
   --color-blue-14: #1D1E28;
   --color-blue-26: #343650;
   --color-blue-59: #8385A9;
@@ -11,6 +12,7 @@
 
   // Design elements
   --transition: 300ms ease-in-out;
+  --easeInOut: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
 // Reset
@@ -44,3 +46,6 @@ p {
   margin: 0;
 }
 
+.App {
+  padding: 0 2.4rem;
+}
